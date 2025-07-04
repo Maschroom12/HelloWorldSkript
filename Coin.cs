@@ -5,8 +5,8 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     void OnTriggerEnter(Collider other){
-        Player player = other.GetComponent<Player>();
-        player.CollectCoins();
+        CoinsCounter coins = other.GetComponent<CoinsCounter>();
+        coins.CollectCoins();
         Destroy(gameObject);
     }
 }
